@@ -1,15 +1,12 @@
 import {StatusBar} from "expo-status-bar";
 import {Text, View} from "react-native";
-import {NativeWindStyleSheet} from "nativewind";
 
-NativeWindStyleSheet.setOutput({
-  default: "native",
-});
+import Header from "../components/header/header";
 
 export default function App() {
   return (
-    <View className=" bg-red-700 border-2">
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <View>
+      <Text>Home</Text>
       <StatusBar style="auto" />
     </View>
   );
