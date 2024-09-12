@@ -1,13 +1,22 @@
 import {StatusBar} from "expo-status-bar";
-import {Text, View} from "react-native";
+import {Text, View, StyleSheet} from "react-native";
+import React from "react";
+import colors from "../theme/colors";
 
-import Header from "../components/header/header";
-
-export default function App() {
+const Home = () => {
   return (
-    <View>
+    <View style={styles.main}>
       <Text>Home</Text>
       <StatusBar style="auto" />
     </View>
   );
-}
+};
+
+const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    backgroundColor: colors.primaryBlack,
+  },
+});
+
+export default Home;
