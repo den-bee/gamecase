@@ -12,7 +12,11 @@ const SearchBar = () => {
         size={26}
         color={colors.primaryWhite}
       />
-      <TextInput style={styles.textinput} placeholder="Search by name" />
+      <TextInput
+        style={styles.textinput}
+        placeholder="Search by title"
+        placeholderTextColor={colors.secondaryWhite}
+      />
     </View>
   );
 };

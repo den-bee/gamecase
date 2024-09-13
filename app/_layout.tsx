@@ -10,14 +10,20 @@ const Layout = () => {
       screenOptions={{
         header: () => <Header />,
         tabBarStyle: {
+          height: 60,
           backgroundColor: colors.secondaryBlack,
-          borderWidth: 0,
+          borderTopWidth: 0,
         },
+
         tabBarLabelStyle: {
           color: colors.primaryWhite,
+          paddingBottom: 10,
         },
         tabBarActiveTintColor: colors.primaryWhite,
         tabBarInactiveTintColor: colors.secondaryBlackLight,
+        tabBarIconStyle: {
+          marginTop: 7,
+        },
       }}
     >
       <Tabs.Screen
