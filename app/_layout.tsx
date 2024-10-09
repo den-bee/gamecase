@@ -1,8 +1,8 @@
 import {Tabs} from "expo-router";
 import React from "react";
 import Feather from "@expo/vector-icons/Feather";
-import Header from "../components/header/header";
 import colors from "../theme/colors";
+import Header from "../components/Header/Header";
 
 const Layout = () => {
   return (

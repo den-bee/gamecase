@@ -1,7 +1,7 @@
 import {View, StyleSheet} from "react-native";
-import SearchBar from "../searchbar/searchbar";
+import SearchBar from "../SearchBar/SearchBar";
 import Constants from "expo-constants";
-import UserIcon from "../usericon/usericon";
+import UserIcon from "../UserIcon/UserIcon";
 import React from "react";
 import colors from "../../theme/colors";
 
