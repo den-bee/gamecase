@@ -13,6 +13,7 @@ const TextComponent: FC<TTextComponentProps> = ({text}) => {
 const styles = StyleSheet.create({
   text: {
     color: colors.primaryWhite,
+    textTransform: "uppercase",
   },
 });
 
