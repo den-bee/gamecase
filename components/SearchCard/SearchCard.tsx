@@ -13,11 +13,11 @@ type TSearchCardProps = {
 const SearchCard: FC<TSearchCardProps> = ({image, title}) => {
   return (
     <View style={styles.container}>
-      <View style={styles.image}>
+      <View style={styles.imageContainer}>
         <Image src={image} />
       </View>
       <View style={styles.content}>
-        <View style={styles.contentTop}>
+        <View style={styles.topContent}>
           {Object.entries(consoleIcons).map(([key, icon]) => (
             <Image
               style={{width: 60, height: 18, margin: 1}}
@@ -26,7 +26,7 @@ const SearchCard: FC<TSearchCardProps> = ({image, title}) => {
             />
           ))}
         </View>
-        <View style={styles.contentBottom}>
+        <View style={styles.bottomContent}>
           <TextComponent text={title} />
           <View style={styles.iconContainer}>
             <Image source={require("../../assets/icons/book.png")} />
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor: colors.primaryWhite,
   },
-  image: {
+  imageContainer: {
     height: 180,
   },
   content: {
@@ -53,14 +53,14 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderColor: colors.primaryWhite,
   },
-  contentTop: {
+  topContent: {
     height: 60,
     flexDirection: "row",
     flexWrap: "wrap",
     alignContent: "center",
     gap: 1,
   },
-  contentBottom: {
+  bottomContent: {
     padding: 3,
     flexDirection: "row",
     justifyContent: "space-between",
