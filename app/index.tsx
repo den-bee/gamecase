@@ -2,12 +2,14 @@ import {StatusBar} from "expo-status-bar";
 import {View, StyleSheet} from "react-native";
 import React from "react";
 import colors from "../theme/colors";
-import WishlistCard from "../components/WishlistCard/WishlistCard";
-import SearchCard from "../components/SearchCard/SearchCard";
+import WishlistCard from "../components/Cards/WishlistCard/WishlistCard";
+import SearchCard from "../components/Cards/SearchCard/SearchCard";
+import CollectionCard from "../components/Cards/CollectionCard/CollectionCard";
 
 const Home = () => {
   return (
     <View style={styles.main}>
+      <CollectionCard />
       <SearchCard image="" title="Test" />
       <WishlistCard
         image=""

@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import React, {FC} from "react";
 import {View, StyleSheet, Image, Pressable} from "react-native";
-import colors from "../../theme/colors";
-import TextComponent from "../TextComponent/TextComponents";
-import ConsoleIcons from "../ConsoleIcons/ConsoleIcons";
+import colors from "../../../theme/colors";
+import TextComponent from "../../TextComponent/TextComponents";
+import ConsoleIcons from "../../ConsoleIcons/ConsoleIcons";
+import HearthIcon from "../../Icons/HearthIcon/HearthIcon";
 
 type TWishlistCardProps = {
   image: string;
@@ -33,7 +33,7 @@ const WishlistCard: FC<TWishlistCardProps> = ({
           <TextComponent text={genre} />
         </View>
         <View style={styles.bottomContent}>
-          <Image source={require("../../assets/icons/hearth.png")} />
+          <HearthIcon />
           <Pressable style={styles.collectionButton}>
             <TextComponent text="add to collection" />
           </Pressable>

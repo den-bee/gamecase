@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import {View, StyleSheet, Image} from "react-native";
 import React, {FC} from "react";
-import colors from "../../theme/colors";
-import TextComponent from "../TextComponent/TextComponents";
-import ConsoleIcons from "../ConsoleIcons/ConsoleIcons";
+import colors from "../../../theme/colors";
+import TextComponent from "../../TextComponent/TextComponents";
+import ConsoleIcons from "../../ConsoleIcons/ConsoleIcons";
+import BookIcon from "../../Icons/BookIcon/BookIcon";
+import HearthIcon from "../../Icons/HearthIcon/HearthIcon";
 
 type TSearchCardProps = {
   image: string;
@@ -21,8 +22,8 @@ const SearchCard: FC<TSearchCardProps> = ({image, title}) => {
         <View style={styles.bottomContent}>
           <TextComponent text={title} />
           <View style={styles.iconContainer}>
-            <Image source={require("../../assets/icons/book.png")} />
-            <Image source={require("../../assets/icons/hearth.png")} />
+            <BookIcon />
+            <HearthIcon />
           </View>
         </View>
       </View>

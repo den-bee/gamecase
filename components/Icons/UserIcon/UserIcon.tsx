@@ -1,7 +1,7 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import React from "react";
 import {View, StyleSheet} from "react-native";
-import colors from "../../theme/colors";
+import colors from "../../../theme/colors";
 
 const UserIcon = () => {
   return (
