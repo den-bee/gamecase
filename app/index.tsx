@@ -2,23 +2,16 @@ import {StatusBar} from "expo-status-bar";
 import {View, StyleSheet} from "react-native";
 import React from "react";
 import colors from "../theme/colors";
-import WishlistCard from "../components/Cards/WishlistCard/WishlistCard";
-import SearchCard from "../components/Cards/SearchCard/SearchCard";
-import CollectionCard from "../components/Cards/CollectionCard/CollectionCard";
+import {Provider} from "react-redux";
+import store from "./store/store";
 
 const Home = () => {
   return (
-    <View style={styles.main}>
-      <CollectionCard image="" title="Test" />
-      <SearchCard image="" title="Test" />
-      <WishlistCard
-        image=""
-        title="Title"
-        releaseDate="18-10-2024"
-        genre="horror"
-      />
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <View style={styles.main}>
+        <StatusBar style="auto" />
+      </View>
+    </Provider>
   );
 };
 
