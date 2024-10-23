@@ -1,15 +1,9 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 import React, {FC} from "react";
-import {
-  View,
-  StyleSheet,
-  Image,
-  ImageSourcePropType,
-  Pressable,
-} from "react-native";
+import {View, StyleSheet, Image, Pressable} from "react-native";
 import colors from "../../theme/colors";
-import consoleIcons from "../../assets/icons/consoleIcons";
 import TextComponent from "../TextComponent/TextComponents";
+import ConsoleIcons from "../ConsoleIcons/ConsoleIcons";
 
 type TWishlistCardProps = {
   image: string;
@@ -31,15 +25,7 @@ const WishlistCard: FC<TWishlistCardProps> = ({
       </View>
       <View style={styles.content}>
         <View style={styles.topContent}>
-          <View style={styles.iconContainer}>
-            {Object.entries(consoleIcons).map(([key, icon]) => (
-              <Image
-                style={{width: 60, height: 18, margin: 1}}
-                key={key}
-                source={icon as ImageSourcePropType}
-              />
-            ))}
-          </View>
+          <ConsoleIcons />
           <TextComponent text={title} />
         </View>
         <View style={styles.midContent}>
@@ -78,10 +64,6 @@ const styles = StyleSheet.create({
   },
   topContent: {
     gap: 10,
-  },
-  iconContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
   },
   midContent: {
     gap: 10,

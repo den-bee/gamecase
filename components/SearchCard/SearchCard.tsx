@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-import {View, StyleSheet, Image, ImageSourcePropType} from "react-native";
+import {View, StyleSheet, Image} from "react-native";
 import React, {FC} from "react";
 import colors from "../../theme/colors";
 import TextComponent from "../TextComponent/TextComponents";
-import consoleIcons from "../../assets/icons/consoleIcons";
+import ConsoleIcons from "../ConsoleIcons/ConsoleIcons";
 
 type TSearchCardProps = {
   image: string;
@@ -17,15 +17,7 @@ const SearchCard: FC<TSearchCardProps> = ({image, title}) => {
         <Image src={image} />
       </View>
       <View style={styles.content}>
-        <View style={styles.topContent}>
-          {Object.entries(consoleIcons).map(([key, icon]) => (
-            <Image
-              style={{width: 60, height: 18, margin: 1}}
-              key={key}
-              source={icon as ImageSourcePropType}
-            />
-          ))}
-        </View>
+        <ConsoleIcons />
         <View style={styles.bottomContent}>
           <TextComponent text={title} />
           <View style={styles.iconContainer}>
@@ -52,13 +44,6 @@ const styles = StyleSheet.create({
     padding: 4,
     borderTopWidth: 1,
     borderColor: colors.primaryWhite,
-  },
-  topContent: {
-    height: 60,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    alignContent: "center",
-    gap: 1,
   },
   bottomContent: {
     padding: 3,

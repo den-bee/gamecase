@@ -3,10 +3,12 @@ import {View, StyleSheet} from "react-native";
 import React from "react";
 import colors from "../theme/colors";
 import WishlistCard from "../components/WishlistCard/WishlistCard";
+import SearchCard from "../components/SearchCard/SearchCard";
 
 const Home = () => {
   return (
     <View style={styles.main}>
+      <SearchCard image="" title="Test" />
       <WishlistCard
         image=""
         title="Title"
