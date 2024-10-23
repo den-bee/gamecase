@@ -1,7 +1,7 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {rawgApi} from "../slices/apiSlice/apiSlice";
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
     [rawgApi.reducerPath]: rawgApi.reducer,
   },

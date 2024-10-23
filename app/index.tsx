@@ -1,17 +1,33 @@
 import {StatusBar} from "expo-status-bar";
-import {View, StyleSheet} from "react-native";
+import {View, StyleSheet, FlatList} from "react-native";
 import React from "react";
 import colors from "../theme/colors";
-import {Provider} from "react-redux";
-import store from "./store/store";
+import {useGetAllGamesQuery} from "./slices/apiSlice/apiSlice";
+import SearchCard from "../components/Cards/SearchCard/SearchCard";
+import TGame from "../types/TGame";
+import TextComponent from "../components/TextComponent/TextComponents";
 
 const Home = () => {
+  const {data: games, isLoading} = useGetAllGamesQuery();
+
+  const renderItem = ({item}: {item: TGame}) => (
+    <SearchCard image={item.short_screenshots[0].image} title={item.name} />
+  );
+
   return (
-    <Provider store={store}>
-      <View style={styles.main}>
-        <StatusBar style="auto" />
-      </View>
-    </Provider>
+    <View style={styles.main}>
+      {isLoading ? (
+        <TextComponent text="Loading" />
+      ) : (
+        <FlatList
+          data={games}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+        />
+      )}
+
+      <StatusBar style="auto" />
+    </View>
   );
 };
 
