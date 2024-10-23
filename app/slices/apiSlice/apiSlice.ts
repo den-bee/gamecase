@@ -1,7 +1,7 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import TGame from "../../../types/TGame";
 
-const key = process.env.API_key;
+const key = process.env.API_KEY;
 
 export const rawgApi = createApi({
   reducerPath: "rawgApi",
