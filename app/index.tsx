@@ -9,7 +9,7 @@ import CollectionCard from "../components/Cards/CollectionCard/CollectionCard";
 const Home = () => {
   return (
     <View style={styles.main}>
-      <CollectionCard />
+      <CollectionCard image="" title="Test" />
       <SearchCard image="" title="Test" />
       <WishlistCard
         image=""
