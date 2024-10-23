@@ -9,6 +9,7 @@ import TextComponent from "../components/TextComponent/TextComponents";
 
 const Home = () => {
   const {data: games, isLoading} = useGetAllGamesQuery();
+  console.log(games);
 
   const renderItem = ({item}: {item: TGame}) => (
     <SearchCard image={item.short_screenshots[0].image} title={item.name} />
