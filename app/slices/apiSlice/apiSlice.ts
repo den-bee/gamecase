@@ -1,5 +1,5 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
-import TGame from "../../../types/TGame";
+import {TRoot} from "../../../types/TGame";
 
 const key = process.env.EXPO_PUBLIC_API_KEY;
 
@@ -9,7 +9,7 @@ export const rawgApi = createApi({
     baseUrl: "https://api.rawg.io/api/",
   }),
   endpoints: (builder) => ({
-    getAllGames: builder.query<TGame[], void>({
+    getAllGames: builder.query<TRoot, void>({
       query: () => `games?key=${key}`,
     }),
   }),

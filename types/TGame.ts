@@ -1,3 +1,19 @@
+export type TRoot = {
+  count: number;
+  next: string;
+  previous: null;
+  results: TGame[];
+  seo_title: string;
+  seo_description: string;
+  seo_keywords: string;
+  seo_h1: string;
+  noindex: boolean;
+  nofollow: boolean;
+  description: string;
+  filters: TFilters;
+  nofollow_collections: string[];
+};
+
 type TGame = {
   id: number;
   slug: string;
@@ -72,5 +88,25 @@ export interface ShortScreenshot {
   id: number;
   image: string;
 }
+
+type TFilters = {
+  years: TYear[];
+};
+
+type TYear = {
+  from: number;
+  to: number;
+  filter: string;
+  decade: number;
+  years: TYear2[];
+  nofollow: boolean;
+  count: number;
+};
+
+type TYear2 = {
+  year: number;
+  count: number;
+  nofollow: boolean;
+};
 
 export default TGame;

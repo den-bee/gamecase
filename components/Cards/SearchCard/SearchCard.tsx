@@ -15,7 +15,7 @@ const SearchCard: FC<TSearchCardProps> = ({image, title}) => {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image src={image} />
+        <Image style={styles.image} source={{uri: image}} />
       </View>
       <View style={styles.content}>
         <ConsoleIcons />
@@ -40,6 +40,12 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     height: 180,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
   },
   content: {
     padding: 4,
